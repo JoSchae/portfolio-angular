@@ -1,0 +1,9 @@
+<div class="progress-container">
+	<svg class="progress-ring" height="120" width="120">
+		<circle class="progress-ring__circle" [style.strokeDashoffset]="strokeDashOffset" [attr.stroke]="'#76cf22'"
+			[attr.stroke-width]="strokeWidth" [style.strokeDasharray]="strokeDashArray" fill="transparent"
+			[attr.r]="radius" [attr.cx]="width" [attr.cy]="width" />
+	</svg>
+	<span class="circle-text">{{percentage}}&#8201;%</span>
+	<div class="label">{{label}}</div>
+</div>

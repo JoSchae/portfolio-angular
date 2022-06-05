@@ -1,0 +1,43 @@
+<div class="container col">
+	<h1>Johannes Schäfer</h1>
+	<section class="image-section">
+		<img class="profil-image" src="assets/images/Profilbild-Resized.webp" alt="profil-picture" />
+	</section>
+
+	<section class="expertise-section col">
+		<h2 class="expertise-header">Skills</h2>
+		<div class="expertise-container row">
+			<app-circle-precentage *ngFor="let skill of skills" [percentage]="skill.percentage" [label]="skill.label">
+			</app-circle-precentage>
+		</div>
+		<div class="more-skills row">
+			<app-button [label]="'Skills'" [routerLink]="'/main'" [fragment]="'skills'"></app-button>
+		</div>
+	</section>
+	<section class="contact-data col">
+		<h2 class="contact-data-header">Contact-Information</h2>
+		<div class="address col">
+			<span>Berliner Straße 180</span>
+			<span>63067 Offenbach am Main</span>
+		</div>
+		<div class="email">
+			<a href="mailto:johannes.ludwig.schaefer@gmail.com">johannes.ludwig.schaefer@gmail.com</a>
+		</div>
+	</section>
+	<section class="online-presence col">
+		<h2 class="online-presence-header">Online Presence</h2>
+		<div class="online-presence-buttons row">
+			<button class="linkedin-btn"><a target="_blank" rel="noreferrer"
+					href="https://www.linkedin.com/in/johannes-sch%C3%A4fer-78b7a71b7/">
+					<i class="fab fa-linkedin"></i>LinkedIn
+				</a></button>
+			<button class="github-btn"><a target="_blank" rel="noreferrer" href="https://github.com/JoSchae">
+					<i class="fab fa-github-square"></i>GitHub
+				</a></button>
+			<button class="instagram-btn"><a target="_blank" rel="noreferrer"
+					href="https://www.instagram.com/kitchen_meatmuffin/">
+					<i class="fab fa-instagram"></i>Instagram
+				</a></button>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,17 @@
+@import "assets/scss/global-styles/styles";
+@import "assets/scss/global-styles/fonts";
+@import "assets/scss/global-styles/constants";
+@import "assets/scss/global-styles/button";
+
+@import "assets/fontawesome/fontawesome.scss";
+@import "assets/fontawesome/brands.scss";
+
+body {
+	color: seashell;
+	font-family: "Roboto", sans-serif;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}

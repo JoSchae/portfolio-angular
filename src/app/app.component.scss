@@ -1,0 +1,12 @@
+@import 'constants';
+
+.app-container {
+	max-width: $max-width-desktop;
+	min-width: $min-desktop-width;
+
+	.divider {
+		margin: 0 1px;
+		width: 0px;
+		border: 1px solid $border-color;
+	}
+}

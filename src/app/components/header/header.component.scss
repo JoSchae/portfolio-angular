@@ -1,0 +1,17 @@
+@import 'constants';
+
+.header-container {
+	position: sticky;
+	top: 2px;
+	height: 100%;
+
+	.header-button-row {
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+
+		app-button {
+			box-shadow: 2px;
+			margin: 6px;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@import 'constants';
+
+:host {
+	max-width:  $max-main-page-width;
+
+.main-page-container {
+	padding: $outer-padding;
+	padding-top: 0;
+}
+}

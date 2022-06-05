@@ -1,0 +1,34 @@
+.progress-container {
+	position: relative;
+	height: 120px;
+	width: 120px;
+}
+
+.progress-ring {
+	position: absolute;
+}
+
+.progress-ring__circle {
+	transition: stroke-dashoffset 0.65s;
+	// axis compensation
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+
+.circle-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.label {
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px solid #76cf22;
+	border-radius: 6px;
+	padding: 2px 6px;
+	box-shadow: 2px 2px 1px rgb(49, 49, 49);
+}
