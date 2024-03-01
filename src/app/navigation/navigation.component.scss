@@ -1,0 +1,39 @@
+:root {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: #ffffff;
+}
+
+.navbar {
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: #ffffff;
+	padding: 1rem;
+
+	&-list {
+		position: sticky;
+		top: 0;
+		background-color: #ffffff;
+		list-style-type: none;
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+
+
+		&-item {
+			padding: 0 2.5rem;
+
+			&-link {
+				text-decoration: none;
+				cursor: pointer;
+
+				&:hover {
+					color: blue;
+				}
+			}
+		}
+	}
+}
