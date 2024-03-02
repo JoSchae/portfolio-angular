@@ -1,0 +1,62 @@
+$section-color: #666;
+$section-background: #f5f5f5;
+
+.header {
+	.header-title {
+		font-size: 2em;
+	}
+
+	.header-intro {
+		font-size: 1.2em;
+	}
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+
+	.section-title {
+		font-size: 1.5em;
+		align-self: flex-start;
+	}
+
+	.content-wrapper {
+		display: flex;
+		align-items: center; // Center the content vertically
+		width: 100%; // Take up the remaining space
+
+		.section-img {
+			width: 20%; // Adjusted to take up 20% of the screen size
+			height: auto;
+			border-radius: 10px; // Slightly rounded borders
+		}
+
+		.section-text {
+			font-size: 1em;
+			width: 80%; // Adjusted to take up the remaining space
+			margin-left: 2rem;
+			padding: 0;
+		}
+	}
+
+	&:nth-of-type(even) {
+		.section-title {
+			align-self: flex-end;
+		}
+
+		.content-wrapper {
+			flex-direction: row-reverse; // On even sections, reverse the order of image and text
+		}
+
+		.section-text {
+			margin-right: 2rem; // Add margin to the left of the text
+		}
+	}
+}
+
+.about,
+.skills,
+.projects {
+	margin-bottom: 20px;
+}

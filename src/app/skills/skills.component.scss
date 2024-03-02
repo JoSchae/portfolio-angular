@@ -1,0 +1,46 @@
+.skills-category {
+	margin-bottom: 2em;
+	border-radius: 10px;
+	overflow: hidden;
+
+	.category-title {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+
+	.skills-group {
+		margin-bottom: 1em;
+		padding: 0.4rem;
+		border: 0.2rem solid #6c757d;
+		border-radius: 10px;
+		overflow: hidden;
+
+		.group-title {
+			font-size: 1.2em;
+			margin-bottom: 0.5em;
+			margin-top: 0;
+		}
+
+		.skill-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 0.5em;
+
+			.skill-name {
+				flex: 1;
+			}
+
+			.skill-level {
+				flex: 2;
+				height: 1em;
+			}
+
+			.skill-value {
+				margin-left: 1em;
+				flex: 0.5;
+				text-align: right;
+			}
+		}
+	}
+}
