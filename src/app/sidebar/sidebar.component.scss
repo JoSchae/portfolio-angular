@@ -3,8 +3,7 @@ aside {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
-	background-color: #f8f9fa;
-	overflow: auto;
+	width: 20vw;
 
 	.content {
 		padding: 20px;
@@ -45,6 +44,10 @@ aside {
 				width: 100%;
 				height: 20px;
 			}
+
+			.link {
+				margin-top: 2rem;
+			}
 		}
 	}
 
@@ -64,10 +67,10 @@ aside {
 			margin: 0.5rem 0;
 			appearance: none;
 
-			img {
-				width: 24px;
-				height: 24px;
-				margin: 0 0.5rem 0 0;
+			[class^="icon-"],
+			[class*=" icon-"] {
+				fill: #fff;
+				margin-right: 0.5rem;
 			}
 		}
 	}

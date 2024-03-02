@@ -1,16 +1,43 @@
+@import '../assets/scss/_variables';
+
 .container {
 	display: flex;
 	height: 100vh;
 
 	.inner-container {
-		width: 80%;
+		width: 100%;
 		overflow: auto;
+		-ms-overflow-style: none; // Hide scrollbar for IE and Edge
+		scrollbar-width: none; // Hide scrollbar for Firefox
+
+		::-webkit-scrollbar {
+			display: none; // Hide scrollbar for Chrome, Safari and Opera
+		}
 
 		js-portfolio-navigation {
 			position: sticky;
 			top: 0;
 			z-index: 1000;
-			background-color: #ffffff;
 		}
+	}
+}
+
+.star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: #fff;
+	animation: fall linear infinite;
+}
+
+@keyframes fall {
+	from {
+		opacity: 1;
+		transform: translateY(-100vh);
+	}
+
+	to {
+		opacity: .5;
+		transform: translateY(100vh);
 	}
 }
