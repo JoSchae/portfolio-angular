@@ -1,8 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/variables';
+@import 'assets/icons/icon-font';
+
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0 10%;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #f4f4f4;
+	font-family: 'Roboto', sans-serif;
+	margin: 0 10%;
+	padding: 0;
+	box-sizing: border-box;
+	background: #000;
+	overflow: hidden;
+	color: #fff;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+		cursor: pointer;
+
+		&:hover {
+			color: darkgray;
+		}
+	}
+}
+
+.star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: #fff;
+	animation: fall linear infinite;
+}
+
+@keyframes fall {
+	from {
+		opacity: 1;
+		transform: translate3d(50vw, -50vh, 0);
+	}
+
+	to {
+		opacity: .5;
+		transform: translate3d(-100vw, 100vh, 0);
+	}
 }
