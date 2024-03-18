@@ -1,4 +1,7 @@
 <nav role="navigation" class="navbar">
+	<button class="menu-button" aria-label="Menu" (click)="toggleNavbar()">
+		<span class="icon-menu menu-button-icon" aria-hidden="true"></span>
+	</button>
 	<ul class="navbar-list">
 		<li class="navbar-list-item"><a class="navbar-list-item-link" routerLink="/home" routerLinkActive="active"
 				aria-label="Navigate to home">Home</a></li>
@@ -8,5 +11,15 @@
 				aria-label="Navigate to about">About</a></li>
 		<li class="navbar-list-item"><a class="navbar-list-item-link" routerLink="/skills" routerLinkActive="active"
 				aria-label="Navigate to skills">Skills</a></li>
+	</ul>
+	<ul class="navbar-list-mobile" [style.display]="showMobileNavbar ? 'flex' : 'none'">
+		<li class="navbar-list-mobile-item"><a class="navbar-list-mobile-item-link" routerLink="/home"
+				routerLinkActive="active" aria-label="Navigate to home">Home</a></li>
+		<li class="navbar-list-mobile-item"><a class="navbar-list-mobile-item-link" routerLink="/cv"
+				routerLinkActive="active" aria-label="Navigate to CV">CV</a></li>
+		<li class="navbar-list-mobile-item"><a class="navbar-list-mobile-item-link" routerLink="/about"
+				routerLinkActive="active" aria-label="Navigate to about">About</a></li>
+		<li class="navbar-list-mobile-item"><a class="navbar-list-mobile-item-link" routerLink="/skills"
+				routerLinkActive="active" aria-label="Navigate to skills">Skills</a></li>
 	</ul>
 </nav>
