@@ -9,4 +9,10 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 	templateUrl: './navigation.component.html',
 	styleUrl: './navigation.component.scss',
 })
-export class NavigationComponent {}
+export class NavigationComponent {
+	public showMobileNavbar = false;
+
+	public toggleNavbar(): void {
+		this.showMobileNavbar = !this.showMobileNavbar;
+	}
+}

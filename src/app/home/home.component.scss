@@ -1,6 +1,14 @@
 $section-color: #666;
 $section-background: #f5f5f5;
 
+img {
+	max-height: 360px;
+	width: fit-content;
+	border-radius: 10px;
+	object-fit: contain;
+	max-width: 100%;
+}
+
 .header {
 	.header-title {
 		font-size: 2em;
@@ -23,20 +31,27 @@ $section-background: #f5f5f5;
 
 	.content-wrapper {
 		display: flex;
-		align-items: center; // Center the content vertically
-		width: 100%; // Take up the remaining space
+		flex-direction: row;
+		align-items: flex-start;
 
 		.section-img {
-			width: 20%; // Adjusted to take up 20% of the screen size
+			order: 2;
+			max-width: 200px;
 			height: auto;
-			border-radius: 10px; // Slightly rounded borders
+			border-radius: 10px;
+			margin-right: 2rem; // Add right margin to the image
 		}
 
-		.section-text {
-			font-size: 1em;
-			width: 80%; // Adjusted to take up the remaining space
-			margin-left: 2rem;
-			padding: 0;
+		.section-text-column {
+			order: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.section-text {
+				font-size: 1em;
+				padding: 0;
+			}
 		}
 	}
 
@@ -45,12 +60,55 @@ $section-background: #f5f5f5;
 			align-self: flex-end;
 		}
 
-		.content-wrapper {
-			flex-direction: row-reverse; // On even sections, reverse the order of image and text
+		@media screen and (min-width: 769px) {
+			.content-wrapper {
+				flex-direction: row-reverse;
+			}
 		}
 
-		.section-text {
-			margin-right: 2rem; // Add margin to the left of the text
+		.section-img {
+			order: 2;
+			margin-left: 0; // Add left margin to the image
+			margin-right: 2rem; // Reset right margin
+		}
+
+		.section-text-column {
+			order: 1;
+
+			.section-text {
+				margin-right: 0; // Add right margin to the text
+				margin-left: 2rem; // Reset left margin
+			}
+		}
+	}
+
+	&:nth-of-type(odd) {
+		.section-img {
+			margin-left: 2rem; // Add left margin to the image
+			margin-right: 0; // Reset right margin
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+
+		.content-wrapper {
+			flex-direction: column;
+
+			.section-img {
+				order: 1;
+				margin: 0 auto;
+				max-width: 100%;
+			}
+
+			.section-text-column {
+				order: 2;
+
+				.section-text {
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }

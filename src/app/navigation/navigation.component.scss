@@ -1,27 +1,104 @@
 @import '../../assets/scss/_variables';
 
+$button-width: 24px;
+$button-padding-left-right: 4px;
+
 .navbar {
 	display: flex;
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	height: $navbar-height;
 	align-items: center;
 	justify-content: flex-end;
-	background-color: #000;
+	background-color: transparent;
+	flex-wrap: wrap;
+	margin-top: 0.4rem;
+
+	.menu-button {
+		display: none;
+		position: relative;
+		z-index: 2;
+		padding: 2px $button-padding-left-right;
+		background-color: rgb(255, 255, 255);
+		border: none;
+		border-radius: 4px;
+
+		&-icon {
+			font-size: $button-width;
+		}
+	}
 
 	&-list {
 		position: sticky;
 		top: 0;
+		left: calc(100% + 0.5rem);
+		z-index: 1;
 		list-style-type: none;
 		margin: 0;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		flex-wrap: wrap;
 
+		@media (max-width: 940px) {
+			display: none; // Hide the desktop menu items on mobile
+		}
 
 		&-item {
-			padding: 0 2.5rem;
+			margin: 0.2rem;
+
+			&-link {
+				padding: 0.2rem 2rem;
+				flex: 1;
+				border-radius: 1rem;
+				margin: 0.2rem;
+				text-align: center;
+				background-color: black;
+				border: 1px solid #ccc;
+
+				&:hover {
+					background-color: rgb(46, 46, 46);
+				}
+			}
+		}
+	}
+
+	&-list-mobile {
+		// New mobile menu items
+		display: none; // Hidden by default
+		position: absolute; // Changed from sticky to absolute
+		top: 0;
+		right: calc($button-width + $button-padding-left-right + 1rem);
+		z-index: 2; // Increased z-index to be above other content
+		list-style-type: none;
+		margin: 0;
+		flex-direction: column;
+		width: max-content; // Take up only as much space as the biggest text
+		background-color: #000; // Add a background color to make the text visible over other content
+		padding: 0;
+
+		&-item {
+			text-align: center;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			margin: 0.1rem;
+
+			&-link {
+				display: block;
+				padding: 10px 20px;
+
+			}
+		}
+	}
+
+	@media screen and (max-width: 940px) {
+		.menu-button {
+			display: block;
+		}
+
+		.navbar-list-mobile.show {
+			// Show the mobile menu items when the 'show' class is present
+			display: flex;
 		}
 	}
 }
