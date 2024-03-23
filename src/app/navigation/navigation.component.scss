@@ -6,13 +6,12 @@ $button-padding-left-right: 4px;
 .navbar {
 	display: flex;
 	position: sticky;
-	top: 0;
+	top: 0.4rem;
 	z-index: 1000;
 	align-items: center;
 	justify-content: flex-end;
 	background-color: transparent;
 	flex-wrap: wrap;
-	margin-top: 0.4rem;
 
 	.menu-button {
 		display: none;
@@ -50,11 +49,13 @@ $button-padding-left-right: 4px;
 			&-link {
 				padding: 0.2rem 2rem;
 				flex: 1;
-				border-radius: 1rem;
+				border-radius: 0.3rem;
 				margin: 0.2rem;
 				text-align: center;
-				background-color: black;
+				background-color: transparent;
+				color: #fff;
 				border: 1px solid #ccc;
+				transition: background-color 0.3s ease;
 
 				&:hover {
 					background-color: rgb(46, 46, 46);
