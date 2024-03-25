@@ -52,7 +52,35 @@ img {
 				font-size: 1em;
 				padding: 0;
 			}
+
+			.hidden-text {
+				display: block;
+				transition: all 0.5s ease-in-out;
+
+				&.hidden {
+					display: none;
+				}
+			}
 		}
+
+		.show-more {
+			display: block;
+			background-color: transparent;
+			color: #fff;
+			border: none;
+			padding: 0.5rem;
+			border-radius: 0;
+			cursor: pointer;
+			text-decoration: underline;
+			align-self: flex-end;
+			width: fit-content;
+
+			&:hover {
+				color: $section-color;
+			}
+		}
+
+
 	}
 
 	&:nth-of-type(even) {

@@ -10,14 +10,43 @@
 		}
 	}
 
+	.content-column {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
 	.inner-container {
 		width: 100%;
 		overflow: scroll;
+		position: relative;
+	}
+}
 
-		js-portfolio-navigation {
-			position: sticky;
-			top: 0;
-			z-index: 1000;
-		}
+.stars-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.star {
+	animation-name: starfall;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes starfall {
+	from {
+		opacity: 1;
+		transform: translate(100vw, 0vh);
+	}
+
+	to {
+		opacity: .5;
+		transform: translate(-100vw, 100vh);
 	}
 }

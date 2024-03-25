@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
 	selector: 'js-portfolio-navigation',
@@ -10,9 +11,24 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 	styleUrl: './navigation.component.scss',
 })
 export class NavigationComponent {
+	@Input()
+	public innerContainer!: HTMLDivElement;
+
 	public showMobileNavbar = false;
+
+	constructor(private readonly _utilService: UtilsService) {}
+
+	public mobileClick(): void {
+		this.toggleNavbar();
+		this.scrollToTop();
+		this.showMobileNavbar = false;
+	}
 
 	public toggleNavbar(): void {
 		this.showMobileNavbar = !this.showMobileNavbar;
+	}
+
+	public scrollToTop(): void {
+		this._utilService.scrollToTop(this.innerContainer);
 	}
 }

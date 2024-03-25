@@ -1,17 +1,16 @@
-<!-- DESKTOP -->
-<!-- Nav -->
 <div class="container">
 	<js-portfolio-sidebar></js-portfolio-sidebar>
-	<div class="inner-container">
-		<js-portfolio-navigation></js-portfolio-navigation>
-		<router-outlet></router-outlet>
+	<div class="content-column">
+		<div #innerContainer class="inner-container">
+			<js-portfolio-navigation [innerContainer]="innerContainer"></js-portfolio-navigation>
+			<router-outlet></router-outlet>
+		</div>
 	</div>
 </div>
-<!-- Main -->
-<!-- Sidebar -->
-<!-- Content -->
-
-<!-- MOBILE -->
-<!-- Nav -->
-<!-- Main -->
-<!-- Content -->
+<div class="stars-container">
+	<div *ngFor="let star of stars" [style.backgroundColor]="star.backgroundColor"
+		[style.animation-duration]="star.duration + 's'" style="width: 2px; height: 2px; position: absolute;"
+		[style.top]="star.startTop" [style.left]="star.startLeft + 'vw'"
+		[style.transform]="'translate(' + star.startLeft + 'px, ' + star.startTop + 'px)'" class="star">
+	</div>
+</div>

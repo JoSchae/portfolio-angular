@@ -48,24 +48,3 @@ body {
 		}
 	}
 }
-
-.star {
-	position: absolute;
-	z-index: -1;
-	width: 2px;
-	height: 2px;
-	background: #fff;
-	animation: fall 10s linear infinite;
-}
-
-@keyframes fall {
-	from {
-		opacity: 1;
-		transform: translate3d(50vw, -50vh, 0);
-	}
-
-	to {
-		opacity: .5;
-		transform: translate3d(-100vw, 100vh, 0);
-	}
-}

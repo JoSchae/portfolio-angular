@@ -21,6 +21,8 @@ $button-padding-left-right: 4px;
 		background-color: rgb(255, 255, 255);
 		border: none;
 		border-radius: 4px;
+		margin-top: 0.4rem;
+		cursor: pointer;
 
 		&-icon {
 			font-size: $button-width;
@@ -66,20 +68,19 @@ $button-padding-left-right: 4px;
 	}
 
 	&-list-mobile {
-		// New mobile menu items
-		display: none; // Hidden by default
-		position: absolute; // Changed from sticky to absolute
+		display: none;
+		position: absolute;
 		top: 0;
 		right: calc($button-width + $button-padding-left-right + 1rem);
-		z-index: 2; // Increased z-index to be above other content
+		z-index: 2;
 		list-style-type: none;
 		margin: 0;
 		flex-direction: column;
-		width: max-content; // Take up only as much space as the biggest text
-		background-color: #000; // Add a background color to make the text visible over other content
+		width: max-content;
 		padding: 0;
 
 		&-item {
+			background-color: #000;
 			text-align: center;
 			border: 1px solid #ccc;
 			border-radius: 10px;
@@ -92,6 +93,7 @@ $button-padding-left-right: 4px;
 			}
 		}
 	}
+
 
 	@media screen and (max-width: 940px) {
 		.menu-button {
