@@ -10,7 +10,7 @@ $button-padding-left-right: 4px;
 	z-index: 1000;
 	align-items: center;
 	justify-content: flex-end;
-	background-color: transparent;
+	background-color: var(--transparent-background);
 	flex-wrap: wrap;
 
 	.menu-button {
@@ -55,13 +55,13 @@ $button-padding-left-right: 4px;
 				border-radius: 0.3rem;
 				margin: 0.2rem;
 				text-align: center;
-				background-color: #000;
-				color: #fff;
+				background-color: var(--background-color);
+				color: var(--text-color);
 				border: 1px solid #ccc;
 				transition: background-color 0.3s ease;
 
 				&:hover {
-					background-color: rgb(46, 46, 46);
+					background-color: var(--hover-color);
 				}
 			}
 		}
@@ -80,7 +80,7 @@ $button-padding-left-right: 4px;
 		padding: 0;
 
 		&-item {
-			background-color: #000;
+			background-color: var(--background-color);
 			text-align: center;
 			border: 1px solid #ccc;
 			border-radius: 10px;
@@ -92,6 +92,10 @@ $button-padding-left-right: 4px;
 
 			}
 		}
+	}
+
+	button {
+		font-size: 1rem;
 	}
 
 

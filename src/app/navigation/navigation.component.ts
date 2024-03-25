@@ -18,6 +18,13 @@ export class NavigationComponent {
 
 	constructor(private readonly _utilService: UtilsService) {}
 
+	ngOnInit() {
+		const theme = localStorage.getItem('theme');
+		if (theme) {
+			document.body.setAttribute('data-theme', theme);
+		}
+	}
+
 	public mobileClick(): void {
 		this.toggleNavbar();
 		this.scrollToTop();
@@ -30,5 +37,17 @@ export class NavigationComponent {
 
 	public scrollToTop(): void {
 		this._utilService.scrollToTop(this.innerContainer);
+	}
+
+	public toggleTheme() {
+		const body = document.body;
+		const currentTheme = body.getAttribute('data-theme');
+		if (currentTheme === 'dark') {
+			body.setAttribute('data-theme', 'light');
+			localStorage.setItem('theme', 'light');
+		} else {
+			body.setAttribute('data-theme', 'dark');
+			localStorage.setItem('theme', 'dark');
+		}
 	}
 }

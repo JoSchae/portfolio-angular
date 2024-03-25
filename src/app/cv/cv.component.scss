@@ -1,8 +1,8 @@
   .download-button {
   	display: inline-block;
   	padding: 10px 20px;
-  	background-color: transparent;
-  	color: #fff;
+  	background-color: var(--transparent-background);
+  	color: var(--text-color);
   	text-decoration: none;
   	border-radius: 0.3rem;
   	border: 1px solid #ccc;
@@ -11,6 +11,6 @@
   	margin-bottom: 20px;
 
   	&:hover {
-  		background-color: rgb(46, 46, 46);
+  		background-color: var(--hover-color);
   	}
   }

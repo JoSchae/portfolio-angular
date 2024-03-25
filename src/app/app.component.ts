@@ -26,20 +26,6 @@ export class AppComponent implements OnInit {
 
 	ngOnInit() {
 		const isPrideMonth = new Date().getMonth() === 5;
-		console.log(new Date().getMonth());
-		// for (let i = 0; i < 1000; i++) {
-		// 	const startLeft = Math.random() * 100 + 'vw';
-		// 	const startTop = Math.random() * 100 + 'vh';
-		// 	this.stars.push({
-		// 		startLeft: startLeft,
-		// 		startTop: startTop,
-		// 		duration: Math.random() * 10 + 2,
-		// 		backgroundColor: isPrideMonth
-		// 			? 'hsl(' + Math.random() * 360 + ', 100%, 50%)'
-		// 			: 'white',
-		// 	});
-		// 	setTimeout(() => {}, 10);
-		// }
 		for (let i = 0; i < 100; i++) {
 			const startLeft = Math.random() * 100 + 'vw';
 			const startTop = Math.random() * 200 - 100 + 'vh'; // random value between -100vh and 100vh
@@ -47,7 +33,7 @@ export class AppComponent implements OnInit {
 				startLeft: startLeft,
 				startTop: startTop,
 				duration: Math.random() * 10 + 2,
-				backgroundColor: isPrideMonth ? 'hsl(' + Math.random() * 360 + ', 100%, 50%)' : 'white',
+				backgroundColor: isPrideMonth ? 'hsl(' + Math.random() * 360 + ', 100%, 50%)' : 'var(--text-color)',
 			});
 		}
 	}
