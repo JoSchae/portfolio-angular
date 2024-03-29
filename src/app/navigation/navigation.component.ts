@@ -33,6 +33,7 @@ export class NavigationComponent implements OnInit {
 
 	public toggleNavbar(): void {
 		this.showMobileNavbar = !this.showMobileNavbar;
+		document.addEventListener('click', this.closeNavbar);
 	}
 
 	public scrollToTop(): void {
@@ -50,4 +51,11 @@ export class NavigationComponent implements OnInit {
 			localStorage.setItem('theme', 'dark');
 		}
 	}
+
+	private closeNavbar = (event: Event): void => {
+		if (!(event.target as HTMLElement).closest('.navbar')) {
+			this.showMobileNavbar = false;
+			document.removeEventListener('click', this.closeNavbar);
+		}
+	};
 }
