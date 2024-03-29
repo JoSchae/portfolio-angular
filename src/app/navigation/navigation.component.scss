@@ -6,7 +6,7 @@ $button-padding-left-right: 4px;
 .navbar {
 	display: flex;
 	position: sticky;
-	top: 0;
+	top: env(safe-area-inset-top);
 	z-index: 1000;
 	align-items: center;
 	justify-content: flex-end;
@@ -31,7 +31,7 @@ $button-padding-left-right: 4px;
 
 	&-list {
 		position: sticky;
-		top: 0;
+		top: env(safe-area-inset-top);
 		left: calc(100% + 0.5rem);
 		z-index: 1;
 		list-style-type: none;

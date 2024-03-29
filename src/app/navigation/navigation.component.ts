@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { UtilsService } from '../services/utils.service';
 
@@ -10,7 +10,7 @@ import { UtilsService } from '../services/utils.service';
 	templateUrl: './navigation.component.html',
 	styleUrl: './navigation.component.scss',
 })
-export class NavigationComponent {
+export class NavigationComponent implements OnInit {
 	@Input()
 	public innerContainer!: HTMLDivElement;
 
