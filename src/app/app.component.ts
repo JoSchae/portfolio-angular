@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -19,12 +19,18 @@ export interface IStar {
 	styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
+	@HostListener('window:resize', ['$event'])
+	onResize() {
+		this.setViewportHeight();
+	}
+
 	@ViewChild('innerContainer', { static: true })
 	public innerContainer!: HTMLDivElement;
 
 	public stars: IStar[] = [];
 
 	ngOnInit() {
+		this.setViewportHeight();
 		const isPrideMonth = new Date().getMonth() === 5;
 		for (let i = 0; i < 100; i++) {
 			const startLeft = Math.random() * 100 + 'vw';
@@ -36,5 +42,10 @@ export class AppComponent implements OnInit {
 				backgroundColor: isPrideMonth ? 'hsl(' + Math.random() * 360 + ', 100%, 50%)' : 'var(--text-color)',
 			});
 		}
+	}
+
+	private setViewportHeight() {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	}
 }
