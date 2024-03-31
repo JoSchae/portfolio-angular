@@ -1,25 +1,32 @@
 <header class="header">
 	<h1 class="header-title">It's Johannes Schäfer</h1>
-	<p class="header-intro">Hi and welcome to my Home Page. I'm Johannes Schäfer, a Senior Fullstack Developer, with a
-		lot experiences in the different areas of Software-Development, ranging from completly rebuilding websites to
-		concepting, building and distributing a complete system on hundreds of trains, and everything in-between</p>
+	<p class="header-intro">
+		Hi and welcome to my Home Page. I'm Johannes Schäfer, a Senior Fullstack Developer, with a lot of experiences in
+		the different areas of Software-Development, ranging from completely rebuilding websites to concepting, building
+		and distributing a complete system on hundreds of trains, and everything in-between.
+	</p>
 </header>
 
 <section class="section about">
 	<h2 class="section-title">Overview</h2>
 	<div class="content-wrapper">
-		<img src="../../assets/images/holiday.webp" alt="A description of the image for screen readers"
-			class="section-img">
+		<img
+			src="../../assets/images/holiday.webp"
+			alt="A description of the image for screen readers"
+			class="section-img"
+		/>
 		<div class="section-text-column">
-			<p class="section-text">I have a lot of passion to create the best code and solutions for my company and
-				customers. I also pride myself to be a good teamplayer in all situations, even if it gets hairy. And a
-				mentor to my junior colleagues, who can always depend on me listining to their problems and either
-				sending them
-				in the right direction, or helping them debug.</p>
-			<p class="section-text">Lastly, I'm a pretty laidback guy that loves going on bikerides, cooking up a storm
-				in the kitchen, and ballroom dancing
-				I'm always open to new opportunities, so if you think I could be a good fit for your
-				company, don't hesitate to contact me.</p>
+			<p class="section-text">
+				I have a lot of passion to create the best code and solutions for my company and customers. I also pride
+				myself in being a good team player in all situations, even if it gets hairy. I'm a mentor to my junior
+				colleagues, who can always depend on me listening to their problems and either sending them in the right
+				direction, or helping them debug.
+			</p>
+			<p class="section-text">
+				Lastly, I'm a pretty laidback guy that loves going on bike rides, cooking up a storm in the kitchen, and
+				ballroom dancing. I'm always open to new opportunities, so if you think I could be a good fit for your
+				company, don't hesitate to contact me.
+			</p>
 			<p class="section-text">Now let's see a few projects I'd love to highlight!</p>
 		</div>
 	</div>
@@ -28,61 +35,64 @@
 <section class="section skills" #section id="db-regio-project">
 	<h2 class="section-title">Webportal for DB-Regio trains</h2>
 	<div class="content-wrapper">
-		<img src="../../assets/images/DB_Regio_CS-1.webp" alt="A DB Regio S-Bahn train in germany" class="section-img">
+		<img
+			src="../../assets/images/DB_Regio_CS-1.webp"
+			alt="A DB Regio S-Bahn train in germany"
+			class="section-img"
+		/>
 		<div class="section-text-column">
-			<p class="section-text">I worked for germanies biggest train-company to provide an offline-capable WebPortal
-				on every regional train, with cloud-based distribution (OpenShift) and with very little real resources
-				on each train. Very challenging, but also very satisfying after we got it to work.</p>
+			<p class="section-text">
+				I worked for Germany's biggest train company to provide an offline-capable WebPortal on every regional
+				train, with cloud-based distribution (OpenShift) and with very little real resources on each train. Very
+				challenging, but also very satisfying after we got it to work.
+			</p>
 			<div class="hidden-text hidden" id="hidden-text">
-				<p class="section-text">At the start of this project I had already worked for DB (german train company)
-					for
-					about a year. The DevOps-Team I was part of got asked to create a solution for a web-portal for all
-					regional trains in germany.</p>
-				<p class="section-text">This may sound easy and straightforward, but it's everything but. First of, the
-					hardware on trains is very different, depending on which manufacturer build the train. Second, the
-					hardware is
-					also
+				<p class="section-text">
+					At the start of this project I had already worked at Deutsche Bahn for about a year. The DevOps-Team
+					I was part of got asked to create a solution for a web-portal for all regional trains in germany.
+				</p>
+				<p class="section-text">
+					This may sound easy and straightforward, but it's everything but. First of, the hardware on trains
+					is very different, depending on which manufacturer build the train. Second, the hardware is also
 					pretty weak. We had about 1GB of memory and 1Ghz of CPU-Power. The rest was allocated to every other
 					services running on trains. Thirdly is the problem of connection. Not only are the trains often
-					driving
-					through tunnels, but there are also a lot off blind spots (for example in forests), where you just
-					don't
-					have
-					a connection.</p>
-				<p class="section-text">With all the problems identified we got to the other requirements our customer
-					wanted.
-					It needed to be orchastrated by a Content-Management-System (at first dotCMS, later on Contentful),
-					and
-					should display not only the newest news from all of germanys news-companies, but also videos. All of
-					that
+					driving through tunnels, but there are also a lot off blind spots (for example in forests), where
+					you just don't have a connection.
+				</p>
+				<p class="section-text">
+					With all the problems identified we got to the other requirements our customer wanted. It needed to
+					be orchastrated by a Content-Management-System (at first dotCMS, later on Contentful), and should
+					display not only the newest news from all of germanys news-companies, but also videos. All of that
 					while still loading in under three seconds and (and now this is the really hard part) be always
-					available,
-					regardless if the train has an internet-connection or not.</p>
+					available, regardless if the train has an internet-connection or not.
+				</p>
 				<p class="section-text">The solved these problems with three strategies:</p>
 				<ul>
-					<li>For the overall installation on the train hardware we used LXC (Linux Containers). That enabled
-						us
-						to have standardized Software and Services on all trains. We also could roll out updates
-						whenever we
-						wanted over the air, instead for having to wait for a maintenance date in a train-garage.</li>
-					<li>Second, we also installed a cache one the train, utlilising all available harddrive space. Those
+					<li>
+						For the overall installation on the train hardware we used LXC (Linux Containers). That enabled
+						us to have standardized Software and Services on all trains. We also could roll out updates
+						whenever we wanted over the air, instead for having to wait for a maintenance date in a
+						train-garage.
+					</li>
+					<li>
+						Second, we also installed a cache one the train, utlilising all available harddrive space. Those
 						caches were automatically updated every hour, so users wouldn't notice any outdated
-						information/news
-						on the platform. This also solved the "offline"-capability.</li>
-					<li>Last, but not least, we had a big backend cloud-service, mirroring the data on each train, that
+						information/news on the platform. This also solved the "offline"-capability.
+					</li>
+					<li>
+						Last, but not least, we had a big backend cloud-service, mirroring the data on each train, that
 						continuosly pulled the newest data from each news-partner. It was essentially our
-						distributing-node,
-						holding and getting all the data, then distributing it to every train, whenevery they where able
-						to
-						ask for the newest information.</li>
+						distributing-node, holding and getting all the data, then distributing it to every train,
+						whenevery they where able to ask for the newest information.
+					</li>
 				</ul>
-				<p class="section-text">In the end it was one of the most complex projects I was ever part of. We had to
-					mirror train hardware for our development and testing, we had to overview the first test-trains, and
-					we
-					had to completly rethink normal distribution-options, because we had to keep train-hardware &
-					-architecture in mind. A very fun but also challenging project. Also my first experience with
-					leading a
-					team, specifically for this project, in the frontend-department.</p>
+				<p class="section-text">
+					In the end it was one of the most complex projects I was ever part of. We had to mirror train
+					hardware for our development and testing, we had to overview the first test-trains, and we had to
+					completly rethink normal distribution-options, because we had to keep train-hardware & -architecture
+					in mind. A very fun but also challenging project. Also my first experience with leading a team,
+					specifically for this project, in the frontend-department.
+				</p>
 			</div>
 			<button (click)="toggleShowMore('db-regio-project')" class="show-more">Show more</button>
 		</div>
@@ -92,70 +102,57 @@
 <section class="section projects" #section id="check24-project">
 	<h2 class="section-title">CHECK24 Credit Comparsion</h2>
 	<div class="content-wrapper">
-		<img src="../../assets/images/check24-kredit-erfahrung-beitragsbild.webp"
-			alt="A description of the image for screen readers" class="section-img">
+		<img
+			src="../../assets/images/check24-kredit-erfahrung-beitragsbild.webp"
+			alt="A description of the image for screen readers"
+			class="section-img"
+		/>
 		<div class="section-text-column">
-			<p class="section-text">Every developers dream. Starting a fresh project with the newest frameworks and
-				technology. If we only not had to practically work with every bank in germany and more. A challenge,
-				that even lead to the team being hired to do the same in austria, after we finished of course ;)</p>
+			<p class="section-text">
+				Every developers dream - starting a fresh project with the newest frameworks and technology. If we only
+				not had to practically work with every bank in Germany and more. (This sentence is confusing me) A
+				challenge, that even led to the team being hired to do the same in Austria, after we finished of course
+				;)
+			</p>
 			<div class="hidden-text hidden" id="hidden-text">
 				<p class="section-text">
 					Germanies biggest comparsion-website, CHECK24, wanted to create a new comparison for credit. They
-					already
-					had a lot of the usual busniess-logic thought out (from the previous website), but now wanted to
-					include
-					new
-					monitorings, algorithems and user-retention-strategies. We were able to start complety from scratch,
-					with
-					only a crude design that relied heavly on the already established company-design. But everything
-					else
-					was a
-					complete new build.
+					already had a lot of the usual busniess-logic thought out (from the previous website), but now
+					wanted to include new monitorings, algorithems and user-retention-strategies. We were able to start
+					complety from scratch, with only a crude design that relied heavly on the already established
+					company-design. But everything else was a complete new build.
 				</p>
-				<p class="section-text">A highly challenging project. We had to work with about every bank-API available
-					in
-					germany, building a beautiful website in line with the rest of CHECK24 style, utilising UX/UI to the
-					best of
+				<p class="section-text">
+					A highly challenging project. We had to work with about every bank-API available in germany,
+					building a beautiful website in line with the rest of CHECK24 style, utilising UX/UI to the best of
 					our abilities for user-retention and still have it working lightning fast (even with the API-calls
-					to
-					get
-					the best credit deals for about 10 different usages). The goal was to, for whatever the user wanted
-					(a
-					credit for a new car, a house, an investment, or even just for pleasure spending), have a website,
-					that
-					guides them to the best possible option available in under 10 minutes.</p>
-				<p class="section-text">There was no doubt, that we had to use the newest frameworks. All off the
-					restrictions
-					and busniess-demands practically forced us to utilize the most robust frontend-framework (Angular
-					v14 at
+					to get the best credit deals for about 10 different usages). The goal was to, for whatever the user
+					wanted (a credit for a new car, a house, an investment, or even just for pleasure spending), have a
+					website, that guides them to the best possible option available in under 10 minutes.
+				</p>
+				<p class="section-text">
+					There was no doubt, that we had to use the newest frameworks. All off the restrictions and
+					busniess-demands practically forced us to utilize the most robust frontend-framework (Angular v14 at
 					that point in time), togehther with a Nest.js middleware(already established in CHECK24) and a
-					custome-build
-					SpringBoot backend (with a database, of course. MongoDB to be precise)</p>
-				<p class="section-text">We spend months on just designing the different components and services that
-					would
-					interact with each other. The look of the components was the easy part. The interaction to provide
-					the
-					user
-					with a smooth and speedy experience was the hard one. Almost every screen had three or more states,
+					custome-build SpringBoot backend (with a database, of course. MongoDB to be precise)
+				</p>
+				<p class="section-text">
+					We spend months on just designing the different components and services that would interact with
+					each other. The look of the components was the easy part. The interaction to provide the user with a
+					smooth and speedy experience was the hard one. Almost every screen had three or more states,
 					depending on what the user chose or put in, everything had to be evaluvated, and every banking-API
-					had
-					its
-					own quirks.</p>
-				<p class="section-text">In the end it worked out beautifully. A completly new website ind the style of
-					other
-					CHECK24 websites, components that can be used for years to come (because of there generic nature and
+					had its own quirks.
+				</p>
+				<p class="section-text">
+					In the end it worked out beautifully. A completly new website ind the style of other CHECK24
+					websites, components that can be used for years to come (because of there generic nature and
 					customizability) and a backend that can withstand thousands of customers simultaniously. It was in
-					fact
-					so
-					good, the team was asked to move to austria. The austria CHECK24-branch also wanted something
-					similar.
-					Sadly
-					that's where I couldn continue, because of the conditions of my contract. But I will always remember
-					those
-					1.5 years fondly. A good time, a lot of fun with my collegues, and working with the newest
-					frameworks
-					was
-					just awesome. And there also was the "Doner-Kebap-Thursday" :D</p>
+					fact so good, the team was asked to move to austria. The austria CHECK24-branch also wanted
+					something similar. Sadly that's where I couldn continue, because of the conditions of my contract.
+					But I will always remember those 1.5 years fondly. A good time, a lot of fun with my collegues, and
+					working with the newest frameworks was just awesome. And there also was the "Doner-Kebap-Thursday"
+					:D
+				</p>
 			</div>
 			<button (click)="toggleShowMore('check24-project')" class="show-more">Show more</button>
 		</div>
@@ -165,67 +162,56 @@
 <section class="section projects" #section id="amag-project">
 	<h2 class="section-title">AMAG.ch</h2>
 	<div class="content-wrapper">
-		<img src="../../assets/images/AMAG Group AG_Helix_high.webp" alt="A description of the image for screen readers"
-			class="section-img">
+		<img
+			src="../../assets/images/AMAG Group AG_Helix_high.webp"
+			alt="A description of the image for screen readers"
+			class="section-img"
+		/>
 		<div class="section-text-column">
-			<p class="section-text">Creating a wonderful User-Experience while being constrained by a CMS is
-				challenging. Leading a team, consulting for the customer and working with legacy code even more so. Let
-				me tell you about the biggest automotive-company is switzerland.</p>
+			<p class="section-text">
+				Creating a wonderful User-Experience while being constrained by a CMS is challenging. Leading a team,
+				consulting for the customer, and working with legacy code even more so. Let me tell you about the
+				biggest automotive company in Switzerland.
+			</p>
 			<div class="hidden-text hidden" id="hidden-text">
-				<p class="section-text">If I would disregard my work for the DB Regio Webportal, this is the most
-					restrictive
-					project I ever worked on. AMAG is the main automotive distributer in switzerland. Around 2019 they
-					bought in
-					AEM (Adobe Experience Manager) as a CMS for their websites. Every since than, Trueinnovation has
-					build,
-					supported and consulted on any websites and projects AMAG had.</p>
-				<p class="section-text">The team I'm leading for this project consists of 2 Frontend-Developer, a
-					Tester, a
+				<p class="section-text">
+					If I would disregard my work for the DB Regio Webportal, this is the most restrictive project I ever
+					worked on. AMAG is the main automotive distributer in switzerland. Around 2019 they bought in AEM
+					(Adobe Experience Manager) as a CMS for their websites. Every since than, Trueinnovation has build,
+					supported and consulted on any websites and projects AMAG had.
+				</p>
+				<p class="section-text">
+					The team I'm leading for this project consists of 2 Frontend-Developer, a Tester, a
 					Backend-Developer/Software-Architect (funnily enough, he's my supervisor, but let me lead the team
-					and
-					reclused him from almost every software-development, because he had so many other projects to also
-					supervise) and me. We constanly work on either new features for the main business of AMAG
-					(automobile
-					services in their on-site garages all over switzerland) or new side-ideas. At the time of writing
-					that's
-					a
-					completly new website to aquire cars through a subscription-model and as of now a new way to report
-					any
-					damages to your car and shedule repairs.</p>
-				<p class="section-text">The car-subscription project was a doozy. We had to work with a lot of other
-					departments, integrated a completly new microservice, and gurantee data-consistency with every other
-					already
-					implemented database/service (like the SAP system in the background). All the while with working in
-					the
-					rather constricting environment of a CMS. But in the end, we were able to do, what we set out to. As
-					the
+					and reclused him from almost every software-development, because he had so many other projects to
+					also supervise) and me. We constanly work on either new features for the main business of AMAG
+					(automobile services in their on-site garages all over switzerland) or new side-ideas. At the time
+					of writing that's a completly new website to aquire cars through a subscription-model and as of now
+					a new way to report any damages to your car and shedule repairs.
+				</p>
+				<p class="section-text">
+					The car-subscription project was a doozy. We had to work with a lot of other departments, integrated
+					a completly new microservice, and gurantee data-consistency with every other already implemented
+					database/service (like the SAP system in the background). All the while with working in the rather
+					constricting environment of a CMS. But in the end, we were able to do, what we set out to. As the
 					senior lead, I wanted this "practically" new website to not have the same flaws of the rest of the
 					organically grown monolith I was first introduced to when I joined the company. Clean code, service
-					and
-					component encapsulation, easy to understand and refactore logic and simple ways to test & document
-					everything</p>
-				<p class="section-text">The damage-report project was even better. We not only were able to just start
-					with
-					a
-					fresh code-base, but also had an opportunity to establish a completly new pattern of generating
-					future
+					and component encapsulation, easy to understand and refactore logic and simple ways to test &
+					document everything.
+				</p>
+				<p class="section-text">
+					The damage-report project was even better. We not only were able to just start with a fresh
+					code-base, but also had an opportunity to establish a completly new pattern of generating future
 					components. The design was almost 1:1 the same as the biggest already existing service amag.ch
-					offers.
-					Because of that, we set out to do this design, but this time as generics. Now, you can just use the
-					templates whenever you want and have them look, feel and behave exactly the same. Now, we can
-					implement
-					specific content into that design whenever we want and write specific business-logic for whatever
-					the
-					customer wants to archive. I would say it is the (for a CMS) cleanest code I ever produced with a
-					team,
-					and
-					everyone of us grew with the project. It was also a lot of fun to mentor my two junior
-					frontend-developers
-					and also talk architectur with my supervisor. While he had the last say, he mostly just agreed with
-					mee,
-					and
-					it was a pleasure to also flex my architectur-certificate for backend for the time I'm employed at
-					trueinnovation.</p>
+					offers. Because of that, we set out to do this design, but this time as generics. Now, you can just
+					use the templates whenever you want and have them look, feel and behave exactly the same. Now, we
+					can implement specific content into that design whenever we want and write specific business-logic
+					for whatever the customer wants to archive. I would say it is the (for a CMS) cleanest code I ever
+					produced with a team, and everyone of us grew with the project. It was also a lot of fun to mentor
+					my two junior frontend-developers and also talk architectur with my supervisor. While he had the
+					last say, he mostly just agreed with mee, and it was a pleasure to also flex my
+					architectur-certificate for backend for the time I'm employed at trueinnovation.
+				</p>
 			</div>
 			<button (click)="toggleShowMore('amag-project')" class="show-more">Show more</button>
 		</div>
