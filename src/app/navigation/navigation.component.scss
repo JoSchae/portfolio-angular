@@ -91,6 +91,19 @@ $button-padding-left-right: 4px;
 				padding: 10px 20px;
 
 			}
+
+			&-button {
+				appearance: none;
+				background-color: transparent;
+				border: none;
+				color: var(--text-color);
+				padding: 10px 20px;
+				cursor: pointer;
+
+				&:hover {
+					color: darkgrey;
+				}
+			}
 		}
 	}
 
